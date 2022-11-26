@@ -19,21 +19,7 @@ const articulosShcema = new mogoose.Schema({
         required: [true, 'La descripcion es obligatoria'],
         trim: true,
         maxlenth: [200, 'La descripcion no puede tener mas de 200 caracteres']
-    },
-    imagen: [
-        {
-            public_id: { //id de la imagen
-                type: String,
-                required: true
-            },
-            url: {
-                type: String,
-                required: true
-
-            } //url de la imagen
-        }
-
-        ]
+    }
 });
 
 module.exports = mogoose.model('Articulo', articulosShcema); 

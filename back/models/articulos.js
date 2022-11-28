@@ -1,26 +1,23 @@
 const mogoose = require('mongoose');
 
 const articulosShcema = new mogoose.Schema({
-    articulo: {
+    articulo:{
         type: String,
-        required: [true, 'El articulo es obligatorio'],
-        trim: true, 
-        maxlenth: [50, 'El articulo no puede tener mas de 50 caracteres']
-    }, 
-    inventario: {
-        type: Number,
-        required: [true, 'El inventario es obligatorio'],
-        trim: true,
-        maxlenth: [50, 'El inventario no puede tener mas de 50 caracteres'],
-        default: 0
+        required: true,
+        
     },
-    descripcion: {
+    inventario:{
+        type: Number,
+        required: true,
+        
+    },
+    descripcion:{
         type: String,
-        required: [true, 'La descripcion es obligatoria'],
-        trim: true,
-        maxlenth: [200, 'La descripcion no puede tener mas de 200 caracteres']
-    }
+        required: true,
+        
+    },
+
 });
 
-module.exports = mogoose.model('Articulo', articulosShcema); 
+module.exports = mogoose.model('articulos', articulosShcema); 
 

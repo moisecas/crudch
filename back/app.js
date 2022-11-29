@@ -9,9 +9,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //importar rutas 
 const articulos = require('./routes/articulo');
+const auth = require('./routes/auth');
 
 //crear rutas 
 app.use('/api', articulos);
+app.use('/api', auth); 
 
 
 module.exports = app; 

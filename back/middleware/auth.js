@@ -1,7 +1,7 @@
 const User = require('../models/auth');
 const jwt = require('jsonwebtoken');
 const ErrorHandler = require('../utils/errorHandler');
-const catchAsyncErrors = require('../middlewares/catchAsyncErrors'); 
+const catchAsyncErrors = require('../middleware/catchAsyncErrors'); 
 
 //verificacion de autenticación 
 

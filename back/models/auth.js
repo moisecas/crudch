@@ -21,7 +21,7 @@ const usuarioSchema = new moongose.Schema({
     },
     role: {
         type: String,
-        default: 'user',
+        default: 'admin',
     },
     registro:{
         type: Date,

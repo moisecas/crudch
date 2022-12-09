@@ -1,5 +1,6 @@
 
 const articulo = require('../models/articulos'); //traemos el modelo articulo que vamos a usar en la base de datos
+const fetch =(url)=>import('node-fetch').then(({default:fetch})=>fetch(url)); //importamos el fetch de node-fetch 
 
 //ver articulos
 exports.getArticulos = async (req, res, next) => {
@@ -54,3 +55,4 @@ exports.deleteArticulo = async (req, res, next) => {
         articuloBorrado
     }); //enviamos el articulo borrado en formato json
 }
+

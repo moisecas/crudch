@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser') //evaluar lo que consigo en el body 
-
+app.set('view engine', 'ejs')
 
 //Uso de constantes importadas
 app.use(express.json());

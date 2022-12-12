@@ -1,7 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const app = express();
+
 
 const { getArticulos, addArticulo,getArticuloById,updateArticulo,deleteArticulo } = require('../controllers/articulosController');
+
+
+app.get('/', (req, res) => {
+    res.render('artis');
+  }); 
 
 //get articulos
 router.route('/articulos').get(getArticulos); //peticion get para ver los articulos 

@@ -22,7 +22,7 @@ describe("conjunto de pruebas", () => {
         cy.get('.alert').contains('You successfully submitted your transaction.') //busca el elemento alert y verifica que contenga el texto The funds were successfully transferred.
     })
 
-    it.only("validación grafico", () => {
+    it.only("validación grafico", () => { //only es para que solo se ejecute este test
         cy.visit("http://zero.webappsecurity.com/")
         cy.get('#signin_button').click() //busca el elemento signin_button y hace click
         cy.get('#user_login').type('username') //busca el elemento user_login y escribe username

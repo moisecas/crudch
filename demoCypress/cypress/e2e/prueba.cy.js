@@ -17,7 +17,8 @@ describe("conjunto de caso de prueba 1", function(){
         cy.get('#cb1-edit').type('iphone 11') //escritura en el campo de busqueda
         cy.get('#cb1-edit').type('{enter}');
         cy.get('.ui-search-results')
-        cy.get('.ui-search-results').type('128GB');
+        cy.get('h2').contains('128 GB').click() //busca el elemento h2 y verifica que contenga el texto 128 GB
+
 
 
     })

@@ -12,7 +12,7 @@ describe("conjunto de caso de prueba 1", function(){
     })
 
     //caso de prueba 2
-    it.only("agregar al carrito", function(){
+    it("agregar al carrito", function(){
         cy.visit("https://www.mercadolibre.com.co/") 
         cy.get('#cb1-edit').type('iphone 11') //escritura en el campo de busqueda
         cy.get('#cb1-edit').type('{enter}');
@@ -23,4 +23,9 @@ describe("conjunto de caso de prueba 1", function(){
 
     })
     //caso de prueba 3
+    it.only("caso 3 elementos", function(){
+        cy.visit("https://www.mercadolibre.com.co/") 
+        cy.get('body > header > div > div.nav-header-menu-wrapper > button').invoke('attr', 'aria-expanded', 'true')//attr es para obtener el atributo aria-expanded y cambiarlo a true
+
+    })
 })

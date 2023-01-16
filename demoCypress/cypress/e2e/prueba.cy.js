@@ -23,9 +23,29 @@ describe("conjunto de caso de prueba 1", function(){
 
     })
     //caso de prueba 3
-    it.only("caso 3 elementos", function(){
+    it("caso 3 elementos", function(){
         cy.visit("https://www.mercadolibre.com.co/") 
         cy.get('body > header > div > div.nav-header-menu-wrapper > button').invoke('attr', 'aria-expanded', 'true')//attr es para obtener el atributo aria-expanded y cambiarlo a true
+        cy.get('.nav-header-menu-switch').click()
+        cy.get('.payment-data-title').contains('Hasta 48 cuotas')
+        cy.log("jeimy.cardenas@sophossolutions.com")
+    })
+    //caso de prueba 4
+    it.only("llenar soportes moises", function(){
+        for (let i = 0; i < 5; i++) {
+            cy.visit("https://docs.google.com/forms/d/e/1FAIpQLSf0_6SB7STsPC_kGeEPTWfx9MA6uRFYSSxKOBJpsqZN1arQKA/viewform")
+            cy.get('#i17 > .vd3tt > .AB7Lab').click() 
+            cy.get('#i45 > .vd3tt > .AB7Lab').click()
+            cy.get('#i64 > .vd3tt > .AB7Lab').click()
+            cy.get('#i74 > .vd3tt > .AB7Lab').click()
+            cy.get('#i96 > .vd3tt > .AB7Lab').click()
+            cy.get('#i109 > .vd3tt > .AB7Lab').click() 
+            cy.get('.lRwqcd > .uArJ5e > .l4V7wb').click()
+        }
+        
+
+
+
 
     })
 })

@@ -31,7 +31,7 @@ describe("conjunto de caso de prueba 1", function(){
         cy.log("jeimy.cardenas@sophossolutions.com")
     })
     //caso de prueba 4
-    it.only("llenar soportes moises", function(){
+    it("llenar soportes moises", function(){
         for (let i = 0; i < 5; i++) {
             cy.visit("https://docs.google.com/forms/d/e/1FAIpQLSf0_6SB7STsPC_kGeEPTWfx9MA6uRFYSSxKOBJpsqZN1arQKA/viewform")
             cy.get('#i17 > .vd3tt > .AB7Lab').click() 
@@ -48,4 +48,15 @@ describe("conjunto de caso de prueba 1", function(){
 
 
     })
+    it.only("caso 5 ", function(){
+        cy.visit("https://www.mercadolibre.com.co/") 
+        cy.get('.nav-header-menu-switch').click()
+        cy.get(':nth-child(3) > :nth-child(5) > a').click()
+        cy.get(':nth-child(1) > .categories__list > :nth-child(7) > .categories__subtitle > .categories__subtitle-title').click() 
+        cy.get(':nth-child(1) > .container-menu > .ui-category-trends-carousel-wrapper > .andes-carousel-snapped__container > .andes-carousel-snapped__controls-wrapper > .andes-carousel-snapped > .andes-carousel-snapped__wrapper > .andes-carousel-snapped__slide--active > .entry-column > .ui-category-trends-entry-container > .andes-card > .andes-card__content > .ui-category-trends-entry-content').click()
+        
+
+
+    
+    }  )
 })

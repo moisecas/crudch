@@ -54,9 +54,6 @@ describe("conjunto de caso de prueba 1", function(){
         cy.get(':nth-child(3) > :nth-child(5) > a').click()
         cy.get(':nth-child(1) > .categories__list > :nth-child(7) > .categories__subtitle > .categories__subtitle-title').click() 
         cy.get(':nth-child(1) > .container-menu > .ui-category-trends-carousel-wrapper > .andes-carousel-snapped__container > .andes-carousel-snapped__controls-wrapper > .andes-carousel-snapped > .andes-carousel-snapped__wrapper > .andes-carousel-snapped__slide--active > .entry-column > .ui-category-trends-entry-container > .andes-card > .andes-card__content > .ui-category-trends-entry-content').click()
-        
-
-
     
-    }  )
+    })
 })

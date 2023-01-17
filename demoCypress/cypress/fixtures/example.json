@@ -1,4 +1,8 @@
 {
   "nombre":"moises",
-  "apellido":"castro"
+  "apellido":"castro",
+  "correo":"correomoises@correo.com",
+  "telefono":"1234567890",
+  "imagen":"imagen.png",
+  "check":["Si"]
 }

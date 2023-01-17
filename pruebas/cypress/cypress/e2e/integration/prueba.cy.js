@@ -1,6 +1,6 @@
 /// <reference types="cypress" /> 
 
-const { before } = require("cypress/types/lodash")
+
 
 //suite caso de prueba avanzados 
 

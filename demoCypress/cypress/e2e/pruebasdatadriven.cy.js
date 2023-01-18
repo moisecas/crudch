@@ -10,8 +10,9 @@ describe('otro conjunto de casos', ()=>{
     //cargaos los valores de la data ubicada en fixtures data.json
     cy.fixture('example.json').then((data)=>{ 
         datos = data; // Assign the data to variable `datos`
+        cy.fixture(datos.imagen).as('imagen') //carga la data de la carpeta fixtures   
     }) 
-    cy.fixture(datos.imagen, 'imagen.png').as('imagen.png') //carga la data de la carpeta fixtures   
+    
  
 })
     beforeEach(()=>{ //antes de cada prueba
@@ -26,8 +27,20 @@ describe('otro conjunto de casos', ()=>{
         cy.get('#telefono_afectado').type(datos.telefono) //ingresamos el telefono
         cy.get('#agregar_archivo').click() //click en el boton para adjuntar archivo
         cy.get('#gestante').click() //click en el boton para adjuntar archivo
-        cy.get('.file').attachFile(datos.imagen) //adjuntamos el archivo
-        
+        cy.get('.file').then (function($el){
+            //convertir a base64 
+            const blod = Cypress.Blob.base64StringToBlob(this.imagen, 'image/png')
+
+            const file = new File([blod], 'imagen.png', {type: 'image/png'}) 
+
+            const lista = new DataTransfer()
+
+            lista.items.add(file)
+
+            const myFileList = lista.files
+            $el[0].files = myFileList
+            $el[0].dispatchEvent(new Event('change', {bubbles: true}))
+        }) 
         
     })  
 })

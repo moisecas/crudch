@@ -41,6 +41,11 @@ describe('otro conjunto de casos', ()=>{
             $el[0].files = myFileList
             $el[0].dispatchEvent(new Event('change', {bubbles: true}))
         }) 
+        cy.get('#comentarios').type(datos.situacion) //ingresamos el comentario que esta en example.json en el campo situacion
+        //de la siguiente clase class="dropdown-menu show" deseo seleccionar la opcion igual a datos.departamento
+        cy.get(':nth-child(5) > :nth-child(3) > .dropdown > .btn > .filter-option > .filter-option-inner > .filter-option-inner-inner').click() //click en el boton para seleccionar el departamento
+        cy.get('.dropdown-menu.show').contains(datos.departamento).click() //seleccionamos el departamento
+
         
     })  
 })

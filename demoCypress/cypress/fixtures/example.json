@@ -4,5 +4,8 @@
   "correo":"correomoises@correo.com",
   "telefono":"1234567890",
   "imagen":"imagen.png",
-  "check":["Si"]
+  "check":["Si"],
+  "situacion":"se encuentra en buen estado",
+  "departamento":"SANTANDER"
+  
 }
